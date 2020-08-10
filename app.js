@@ -83,7 +83,7 @@ app.use('/', require('./routes/index'))
 app.use('/auth', require('./routes/auth'))
 app.use('/stories', require('./routes/stories'))
 
-
+// PORT is  specified in  config/config.env file
 const PORT = process.env.PORT || 3000
 
 app.listen(
