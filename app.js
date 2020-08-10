@@ -25,7 +25,7 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: true}))
 app.use(express.json())
 
-// Method override
+// Method override for PUT and DELETE operation
 app.use(methodOverride(function (req, res) {
     if (req.body && typeof req.body === 'object' && '_method' in req.body) {
       // look in urlencoded POST bodies and delete it
@@ -83,7 +83,7 @@ app.use('/', require('./routes/index'))
 app.use('/auth', require('./routes/auth'))
 app.use('/stories', require('./routes/stories'))
 
-
+// PORT is  specified in  config/config.env file
 const PORT = process.env.PORT || 3000
 
 app.listen(
