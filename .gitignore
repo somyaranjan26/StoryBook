@@ -1,9 +1,6 @@
 # Mac File
 *.DS_Store
 
-# Config file
-# config/config.env
-
 # Logs
 logs
 *.log
